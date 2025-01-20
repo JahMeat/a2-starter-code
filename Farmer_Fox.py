@@ -1,9 +1,9 @@
 '''Farmer_Fox.py
 [STUDENTS: REPLACE THE FOLLOWING INFORMATION WITH YOUR
 OWN:]
-by Janet Jenson and Susan Lee
-UWNetIDs: jjens17, suelee01
-Student numbers: 1799999, 2599999
+by Jah Chen and Eugene Cheung
+UWNetIDs: jah0311, ...
+Student numbers: 2235225, ...
 
 Assignment 2, in CSE 415, Winter 2025
  
@@ -26,7 +26,19 @@ class State:
 
     # include methods similar to those in HumansRobotsFerry.py for
     # this class.
-    pass
+    def __init__(self, old=None):
+        if old is None:
+            self.farmer = 'left'
+            self.fox = 'left'
+            self.chicken = 'left'
+            self.grain = 'left'
+        else:
+            self.farmer = old.farmer
+            self.fox = old.fox
+            self.chicken = old.chicken
+            self.grain = old.grain
+
+        
 
 # Put your INITIAL STATE section here.
 

@@ -71,7 +71,7 @@ class ItrDFS:
             CLOSED.append(S)
 
             if S.is_goal():
-                print(self.Problem.GOAL_MESSAGE_FUNCTION(S))
+                print(self.Problem.goal_message(S))
                 self.PATH = [str(state) for state in self.backtrace(S)]
                 self.PATH_LENGTH = len(self.PATH) - 1
                 print(f"Length of solution path found: {self.PATH_LENGTH} edges")

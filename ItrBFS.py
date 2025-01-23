@@ -46,11 +46,13 @@ class ItrBFS:
             current_state = open_list.pop(0)
             closed_list.append(current_state)
 
-            if self.Problem.GOAL_TEST(current_state):
+            if current_state.is_goal():
                 print(f"Goal reached: {current_state}")
                 self.PATH = self.backtrace(current_state)
                 self.PATH_LENGTH = len(self.PATH) - 1
-                print(f"Solution path: {self.PATH}")
+                print("Solution path:")
+                for state in self.PATH:
+                    print(state)
                 print(f"Path length: {self.PATH_LENGTH}")
                 print(f"Nodes expanded: {self.COUNT}")
                 print(f"Max open list length: {self.MAX_OPEN_LENGTH}")

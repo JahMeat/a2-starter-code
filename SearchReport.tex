@@ -36,17 +36,17 @@ The paths are not required in the report for the entries marked "skip."
 \hline
 \parbox{3.5cm}{Problem and\\ Algorithm} & Path Found & Path length & \#Nodes Expanded \\
 \hline
-\makecell[l]{Humans, Robots\\ and Ferry / DFS} & (skip) & & \\
+\makecell[l]{Humans, Robots\\ and Ferry / DFS} & (skip) & 9 & 10\\
 \hline
-\makecell[l]{Humans, Robots\\ and Ferry / BreadthFS} & & & \\
+\makecell[l]{Humans, Robots\\ and Ferry / BreadthFS} & & 7 & 10 \\
 \hline
 \makecell[l]{Farmer, Fox, Chicken\\ and Grain/ DFS} & & & \\
 \hline
-\makecell[l]{Farmer, Fox, Chicken\\ and Grain/ BreadthFS} & & & \\
+\makecell[l]{Farmer, Fox, Chicken\\ and Grain/ BreadthFS}  & & 7 & 24\\
 \hline
-\makecell[l]{4-Disk Towers of\\ Hanoi/DFS} & (skip) & & \\
+\makecell[l]{4-Disk Towers of\\ Hanoi/DFS} & (skip) & 40 & 40 \\
 \hline
-\makecell[l]{4-Disk Towers of\\ Hanoi/BreadthFS} & & & \\
+\makecell[l]{4-Disk Towers of\\ Hanoi/BreadthFS} & & 15 & 70 \\
 \hline
 \end{tabular}}
 
@@ -56,9 +56,126 @@ The paths are not required in the report for the entries marked "skip."
 
  \begin{itemize}
  \item HRF/BreadthFS:
+ Solution path:
+
+ H on left:3
+ R on left:3
+   H on right:0
+   R on right:0
+ ferry is on the left.
+
+
+ H on left:2
+ R on left:2
+   H on right:1
+   R on right:1
+ ferry is on the right.
+
+
+ H on left:3
+ R on left:2
+   H on right:0
+   R on right:1
+ ferry is on the left.
+
+
+ H on left:0
+ R on left:2
+   H on right:3
+   R on right:1
+ ferry is on the right.
+
+
+ H on left:2
+ R on left:2
+   H on right:1
+   R on right:1
+ ferry is on the left.
+
+
+ H on left:0
+ R on left:1
+   H on right:3
+   R on right:2
+ ferry is on the right.
+
+
+ H on left:1
+ R on left:1
+   H on right:2
+   R on right:2
+ ferry is on the left.
+
+
+ H on left:0
+ R on left:0
+   H on right:3
+   R on right:3
+ ferry is on the right.
+
+Path length: 7
+Nodes expanded: 10
+Max open list length: 2
  \item FFCG/DFS: 
  \item FFCG/BreadthFS:
+
+ Left Bank: ['farmer', 'fox', 'chicken', 'grain']
+Right Bank: []
+Boat is on the left bank.
+
+Left Bank: ['fox', 'grain']
+Right Bank: ['farmer', 'chicken']
+Boat is on the right bank.
+
+Left Bank: ['fox', 'grain', 'farmer']
+Right Bank: ['chicken']
+Boat is on the left bank.
+
+Left Bank: ['grain']
+Right Bank: ['chicken', 'farmer', 'fox']
+Boat is on the right bank.
+
+Left Bank: ['grain', 'farmer', 'chicken']
+Right Bank: ['fox']
+Boat is on the left bank.
+
+Left Bank: ['chicken']
+Right Bank: ['fox', 'farmer', 'grain']
+Boat is on the right bank.
+
+Left Bank: ['chicken', 'farmer']
+Right Bank: ['fox', 'grain']
+Boat is on the left bank.
+
+Left Bank: []
+Right Bank: ['fox', 'grain', 'farmer', 'chicken']
+Boat is on the right bank.
+Path length: 7
+Nodes expanded: 24
+Max open list length: 7
+
  \item 4-Disk TOH/BreadthFS:
+
+ [[4, 3, 2, 1] ,[] ,[]]
+[[4, 3, 2] ,[1] ,[]]
+[[4, 3] ,[1] ,[2]]
+[[4, 3] ,[] ,[2, 1]]
+[[4] ,[3] ,[2, 1]]
+[[4, 1] ,[3] ,[2]]
+[[4, 1] ,[3, 2] ,[]]
+[[4] ,[3, 2, 1] ,[]]
+[[] ,[3, 2, 1] ,[4]]
+[[] ,[3, 2] ,[4, 1]]
+[[2] ,[3] ,[4, 1]]
+[[2, 1] ,[3] ,[4]]
+[[2, 1] ,[] ,[4, 3]]
+[[2] ,[1] ,[4, 3]]
+[[] ,[1] ,[4, 3, 2]]
+[[] ,[] ,[4, 3, 2, 1]]
+Path length: 15
+Nodes expanded: 70
+Max open list length: 16
+
  \end{itemize}
 
  \subsection{Part A Step 8,  Explanations of Certain Differences, Using Towers-of-Hanoi  }
@@ -66,11 +183,14 @@ The paths are not required in the report for the entries marked "skip."
 \begin{paragraph}
 (i. Why the maximum length of the OPEN list is more for one algorithm
 than the other)
+In BFS, the OPEN list grows as it explores nodes level by level. All possible states at the current level must be stored before moving to the next level.
+Since BFS systematically explores all neighbors, the number of states stored in the OPEN list is higher. This explains why the maximum OPEN list length is 16 for BFS in this case.
 
 \end{paragraph}
 \begin{paragraph}
 (ii. Why why the solution PATH length is different for one algorithm from that of the other. )
-
+DFS explores paths deeply before backtracking, meaning it doesn’t need to store as many intermediate states in memory. Once a path is finished, it backtracks and removes unnecessary states from the OPEN list.
+DFS is memory-efficient and typically requires less space. Here, the maximum length of the OPEN list is 7, which is much smaller than BFS.
 \end{paragraph}
 
 % -----------------------------

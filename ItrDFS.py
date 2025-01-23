@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """ ItrDFS.py
 Iterative Depth-First Search of a problem space.
@@ -71,7 +72,7 @@ class ItrDFS:
             CLOSED.append(S)
 
             if S.is_goal():
-                print(self.Problem.goal_message(S))
+                print(self.Problem.GOAL_MESSAGE_FUNCTION(S))
                 self.PATH = [str(state) for state in self.backtrace(S)]
                 self.PATH_LENGTH = len(self.PATH) - 1
                 print(f"Length of solution path found: {self.PATH_LENGTH} edges")

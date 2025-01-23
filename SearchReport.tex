@@ -20,9 +20,9 @@ and heuristic search.
 
 \subsection{Part A Step 4 (c)}
 
-(The 4th if-statement of can_move function states that if there's at least one human remaining on the on the ferry's current side after taking 
-a group of humans and robots onto the ferry and that the those remaining humans are outnumbered by the robots, it's illegal to move the ferry.)
-
+(Your answer for the question in Part A step 4 goes here.)
+The 4th if-statement of can_move function states that if there's at least one human remaining on the on the ferry's current side after taking 
+a group of humans and robots onto the ferry and that the those remaining humans are outnumbered by the robots, it's illegal to move the ferry.
 
 \subsection{Part A Step 8}
 
@@ -40,7 +40,7 @@ The paths are not required in the report for the entries marked "skip."
 \hline
 \makecell[l]{Humans, Robots\\ and Ferry / BreadthFS} & & 7 & 10 \\
 \hline
-\makecell[l]{Farmer, Fox, Chicken\\ and Grain/ DFS} & & & \\
+\makecell[l]{Farmer, Fox, Chicken\\ and Grain/ DFS} & & 7 & 7\\
 \hline
 \makecell[l]{Farmer, Fox, Chicken\\ and Grain/ BreadthFS}  & & 7 & 24\\
 \hline
@@ -116,18 +116,20 @@ The paths are not required in the report for the entries marked "skip."
 Path length: 7
 Nodes expanded: 10
 Max open list length: 2
- \item FFCG/DFS: 
- \item FFCG/BreadthFS:
 
- Left Bank: ['farmer', 'fox', 'chicken', 'grain']
+ \item FFCG/DFS: 
+
+ Solution path:
+
+Left Bank: ['chicken', 'farmer', 'fox', 'grain']
 Right Bank: []
 Boat is on the left bank.
 
 Left Bank: ['fox', 'grain']
-Right Bank: ['farmer', 'chicken']
+Right Bank: ['chicken', 'farmer']
 Boat is on the right bank.
 
-Left Bank: ['fox', 'grain', 'farmer']
+Left Bank: ['farmer', 'fox', 'grain']
 Right Bank: ['chicken']
 Boat is on the left bank.
 
@@ -135,12 +137,12 @@ Left Bank: ['grain']
 Right Bank: ['chicken', 'farmer', 'fox']
 Boat is on the right bank.
 
-Left Bank: ['grain', 'farmer', 'chicken']
+Left Bank: ['chicken', 'farmer', 'grain']
 Right Bank: ['fox']
 Boat is on the left bank.
 
 Left Bank: ['chicken']
-Right Bank: ['fox', 'farmer', 'grain']
+Right Bank: ['farmer', 'fox', 'grain']
 Boat is on the right bank.
 
 Left Bank: ['chicken', 'farmer']
@@ -148,11 +150,50 @@ Right Bank: ['fox', 'grain']
 Boat is on the left bank.
 
 Left Bank: []
-Right Bank: ['fox', 'grain', 'farmer', 'chicken']
+Right Bank: ['chicken', 'farmer', 'fox', 'grain']
 Boat is on the right bank.
-Path length: 7
-Nodes expanded: 24
-Max open list length: 7
+Length of solution path found: 7 edges
+Number of states expanded: 7
+Maximum length of the open list: 3
+
+ \item FFCG/BreadthFS:
+
+ Solution path:
+
+ Left Bank: ['chicken', 'farmer', 'fox', 'grain']
+ Right Bank: []
+ Boat is on the left bank.
+ 
+ Left Bank: ['fox', 'grain']
+ Right Bank: ['chicken', 'farmer']
+ Boat is on the right bank.
+ 
+ Left Bank: ['farmer', 'fox', 'grain']
+ Right Bank: ['chicken']
+ Boat is on the left bank.
+ 
+ Left Bank: ['grain']
+ Right Bank: ['chicken', 'farmer', 'fox']
+ Boat is on the right bank.
+ 
+ Left Bank: ['chicken', 'farmer', 'grain']
+ Right Bank: ['fox']
+ Boat is on the left bank.
+ 
+ Left Bank: ['chicken']
+ Right Bank: ['farmer', 'fox', 'grain']
+ Boat is on the right bank.
+ 
+ Left Bank: ['chicken', 'farmer']
+ Right Bank: ['fox', 'grain']
+ Boat is on the left bank.
+ 
+ Left Bank: []
+ Right Bank: ['chicken', 'farmer', 'fox', 'grain']
+ Boat is on the right bank.
+ Path length: 7
+ Nodes expanded: 9
+ Max open list length: 2
 
  \item 4-Disk TOH/BreadthFS:
 

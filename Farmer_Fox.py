@@ -34,7 +34,7 @@ class State:
     # this class.
     def __init__(self, old=None):
         if old is None:
-            self.left_bank = ['farmer', 'fox', 'chicken', 'grain']
+            self.left_bank = Bank[:]
             self.right_bank = []
             self.boat = LEFT
         else:
@@ -44,13 +44,15 @@ class State:
 
 
     def __eq__(self, s2):
-        if self.left_bank != s2.left_bank: return False
-        if self.right_bank != s2.right_bank: return False
+        if sorted(self.left_bank) != sorted(s2.left_bank): return False
+        if sorted(self.right_bank) != sorted(s2.right_bank): return False
+        if self.boat != s2.boat: return False
         return True
     
     def __str__(self):
-        return "\nLeft Bank: " + str(self.left_bank) + "\nRight Bank: " + str(self.right_bank) \
-                + "\nBoat is on the " + ("left" if self.boat == LEFT else "right") + " bank."
+        return "\nLeft Bank: " + str(sorted(self.left_bank)) + "\nRight Bank: " + \
+               str(sorted(self.right_bank)) + \
+               "\nBoat is on the " + ("left" if self.boat == LEFT else "right") + " bank."
     
     def __hash__(self):
         return (self.__str__()).__hash__()

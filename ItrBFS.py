@@ -81,7 +81,7 @@ class ItrBFS:
             path.append(state)
             state = self.BACKLINKS[state]
         path.reverse()  # Reverse the path to start from the initial state.
-        return path
+        return [str(s) for s in path]
 
 
 

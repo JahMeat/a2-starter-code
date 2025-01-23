@@ -1,347 +1,78 @@
 Welcome to ItrDFS
 Initial State:
 
-Left Bank: ['farmer', 'fox', 'chicken', 'grain']
+Left Bank: ['chicken', 'farmer', 'fox', 'grain']
 Right Bank: []
 Boat is on the left bank.
 len(OPEN)= 1; len(CLOSED)= 0; COUNT = 0
 OPEN is now:
 Left Bank: ['fox', 'grain']
-Right Bank: ['farmer', 'chicken']
+Right Bank: ['chicken', 'farmer']
 Boat is on the right bank.
 len(OPEN)= 1; len(CLOSED)= 1; COUNT = 1
 OPEN is now:
-Left Bank: ['fox', 'grain', 'farmer']
+Left Bank: ['farmer', 'fox', 'grain']
 Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['fox', 'grain', 'farmer', 'chicken']
-Right Bank: []
 Boat is on the left bank.
-len(OPEN)= 2; len(CLOSED)= 2; COUNT = 2
+len(OPEN)= 1; len(CLOSED)= 2; COUNT = 2
 OPEN is now:
-Left Bank: ['fox', 'grain']
-Right Bank: ['chicken', 'farmer']
-Boat is on the right bank.,
-Left Bank: ['grain']
-Right Bank: ['chicken', 'farmer', 'fox']
-Boat is on the right bank.,
-Left Bank: ['fox']
-Right Bank: ['chicken', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: ['fox', 'grain', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.
-len(OPEN)= 4; len(CLOSED)= 3; COUNT = 3
-OPEN is now:
-Left Bank: ['fox', 'grain', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
 Left Bank: ['grain']
 Right Bank: ['chicken', 'farmer', 'fox']
 Boat is on the right bank.,
 Left Bank: ['fox']
 Right Bank: ['chicken', 'farmer', 'grain']
 Boat is on the right bank.
-len(OPEN)= 3; len(CLOSED)= 4; COUNT = 4
+len(OPEN)= 2; len(CLOSED)= 3; COUNT = 3
 OPEN is now:
-Left Bank: ['grain']
-Right Bank: ['chicken', 'farmer', 'fox']
+Left Bank: ['chicken', 'farmer', 'grain']
+Right Bank: ['fox']
+Boat is on the left bank.,
+Left Bank: ['fox']
+Right Bank: ['chicken', 'farmer', 'grain']
+Boat is on the right bank.
+len(OPEN)= 2; len(CLOSED)= 4; COUNT = 4
+OPEN is now:
+Left Bank: ['chicken']
+Right Bank: ['farmer', 'fox', 'grain']
 Boat is on the right bank.,
 Left Bank: ['fox']
 Right Bank: ['chicken', 'farmer', 'grain']
 Boat is on the right bank.
 len(OPEN)= 2; len(CLOSED)= 5; COUNT = 5
 OPEN is now:
-Left Bank: ['grain', 'farmer', 'fox']
-Right Bank: ['chicken']
+Left Bank: ['chicken', 'farmer']
+Right Bank: ['fox', 'grain']
 Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
+Left Bank: ['chicken', 'farmer', 'fox']
+Right Bank: ['grain']
 Boat is on the left bank.,
 Left Bank: ['fox']
 Right Bank: ['chicken', 'farmer', 'grain']
 Boat is on the right bank.
 len(OPEN)= 3; len(CLOSED)= 6; COUNT = 6
 OPEN is now:
-Left Bank: ['grain', 'fox']
-Right Bank: ['chicken', 'farmer']
+Left Bank: []
+Right Bank: ['chicken', 'farmer', 'fox', 'grain']
 Boat is on the right bank.,
+Left Bank: ['chicken', 'farmer', 'fox']
+Right Bank: ['grain']
+Boat is on the left bank.,
 Left Bank: ['fox']
 Right Bank: ['chicken', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
+Boat is on the right bank.
 len(OPEN)= 3; len(CLOSED)= 7; COUNT = 7
-OPEN is now:
-Left Bank: ['grain', 'fox', 'farmer']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['fox']
-Right Bank: ['chicken', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 4; len(CLOSED)= 8; COUNT = 8
-OPEN is now:
-Left Bank: ['fox']
-Right Bank: ['chicken', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 3; len(CLOSED)= 9; COUNT = 9
-OPEN is now:
-Left Bank: ['fox', 'farmer', 'chicken']
-Right Bank: ['grain']
-Boat is on the left bank.,
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 4; len(CLOSED)= 10; COUNT = 10
-OPEN is now:
-Left Bank: ['chicken']
-Right Bank: ['grain', 'farmer', 'fox']
-Boat is on the right bank.,
-Left Bank: ['fox']
-Right Bank: ['grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 5; len(CLOSED)= 11; COUNT = 11
-OPEN is now:
-Left Bank: ['chicken', 'farmer']
-Right Bank: ['grain', 'fox']
-Boat is on the left bank.,
-Left Bank: ['chicken', 'farmer', 'fox']
-Right Bank: ['grain']
-Boat is on the left bank.,
-Left Bank: ['chicken', 'farmer', 'grain']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: ['fox']
-Right Bank: ['grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 7; len(CLOSED)= 12; COUNT = 12
-OPEN is now:
-Left Bank: ['chicken']
-Right Bank: ['grain', 'fox', 'farmer']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['chicken', 'farmer', 'fox']
-Right Bank: ['grain']
-Boat is on the left bank.,
-Left Bank: ['chicken', 'farmer', 'grain']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: ['fox']
-Right Bank: ['grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 8; len(CLOSED)= 13; COUNT = 13
-OPEN is now:
-Left Bank: ['chicken', 'farmer', 'fox']
-Right Bank: ['grain']
-Boat is on the left bank.,
-Left Bank: ['chicken', 'farmer', 'grain']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['fox']
-Right Bank: ['grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 7; len(CLOSED)= 14; COUNT = 14
-OPEN is now:
-Left Bank: ['fox']
-Right Bank: ['grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['chicken', 'farmer', 'grain']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 6; len(CLOSED)= 15; COUNT = 15
-OPEN is now:
-Left Bank: ['fox', 'farmer', 'grain']
-Right Bank: ['chicken']
-Boat is on the left bank.,
-Left Bank: ['chicken', 'farmer', 'grain']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 5; len(CLOSED)= 16; COUNT = 16
-OPEN is now:
-Left Bank: ['chicken', 'farmer', 'grain']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 4; len(CLOSED)= 17; COUNT = 17
-OPEN is now:
-Left Bank: ['grain']
-Right Bank: ['fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['chicken']
-Right Bank: ['fox', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.,
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-len(OPEN)= 5; len(CLOSED)= 18; COUNT = 18
-OPEN is now:
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.,
-Left Bank: ['chicken']
-Right Bank: ['fox', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.
-len(OPEN)= 4; len(CLOSED)= 19; COUNT = 19
-OPEN is now:
-Left Bank: ['chicken']
-Right Bank: ['fox', 'farmer', 'grain']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.
-len(OPEN)= 3; len(CLOSED)= 20; COUNT = 20
-OPEN is now:
-Left Bank: ['chicken', 'farmer']
-Right Bank: ['fox', 'grain']
-Boat is on the left bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.
-len(OPEN)= 3; len(CLOSED)= 21; COUNT = 21
-OPEN is now:
-Left Bank: ['chicken']
-Right Bank: ['fox', 'grain', 'farmer']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['fox', 'grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.
-len(OPEN)= 4; len(CLOSED)= 22; COUNT = 22
-OPEN is now:
-Left Bank: []
-Right Bank: ['fox', 'grain', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: []
-Right Bank: ['grain', 'fox', 'farmer', 'chicken']
-Boat is on the right bank.,
-Left Bank: ['grain', 'fox', 'farmer', 'chicken']
-Right Bank: []
-Boat is on the left bank.
-len(OPEN)= 3; len(CLOSED)= 23; COUNT = 23
 Congratulations on successfully transporting the farmer, fox, chicken, and grain!
 Solution path:
 
-Left Bank: ['farmer', 'fox', 'chicken', 'grain']
+Left Bank: ['chicken', 'farmer', 'fox', 'grain']
 Right Bank: []
 Boat is on the left bank.
 
 Left Bank: ['fox', 'grain']
-Right Bank: ['farmer', 'chicken']
+Right Bank: ['chicken', 'farmer']
 Boat is on the right bank.
 
-Left Bank: ['fox', 'grain', 'farmer']
+Left Bank: ['farmer', 'fox', 'grain']
 Right Bank: ['chicken']
 Boat is on the left bank.
 
@@ -349,52 +80,12 @@ Left Bank: ['grain']
 Right Bank: ['chicken', 'farmer', 'fox']
 Boat is on the right bank.
 
-Left Bank: ['grain', 'farmer', 'fox']
-Right Bank: ['chicken']
-Boat is on the left bank.
-
-Left Bank: ['grain', 'fox']
-Right Bank: ['chicken', 'farmer']
-Boat is on the right bank.
-
-Left Bank: ['grain', 'fox', 'farmer']
-Right Bank: ['chicken']
-Boat is on the left bank.
-
-Left Bank: ['fox']
-Right Bank: ['chicken', 'farmer', 'grain']
-Boat is on the right bank.
-
-Left Bank: ['fox', 'farmer', 'chicken']
-Right Bank: ['grain']
-Boat is on the left bank.
-
-Left Bank: ['chicken']
-Right Bank: ['grain', 'farmer', 'fox']
-Boat is on the right bank.
-
-Left Bank: ['chicken', 'farmer']
-Right Bank: ['grain', 'fox']
-Boat is on the left bank.
-
-Left Bank: ['chicken']
-Right Bank: ['grain', 'fox', 'farmer']
-Boat is on the right bank.
-
 Left Bank: ['chicken', 'farmer', 'grain']
 Right Bank: ['fox']
 Boat is on the left bank.
 
-Left Bank: ['grain']
-Right Bank: ['fox', 'farmer', 'chicken']
-Boat is on the right bank.
-
-Left Bank: ['grain', 'farmer', 'chicken']
-Right Bank: ['fox']
-Boat is on the left bank.
-
 Left Bank: ['chicken']
-Right Bank: ['fox', 'farmer', 'grain']
+Right Bank: ['farmer', 'fox', 'grain']
 Boat is on the right bank.
 
 Left Bank: ['chicken', 'farmer']
@@ -402,8 +93,8 @@ Right Bank: ['fox', 'grain']
 Boat is on the left bank.
 
 Left Bank: []
-Right Bank: ['fox', 'grain', 'farmer', 'chicken']
+Right Bank: ['chicken', 'farmer', 'fox', 'grain']
 Boat is on the right bank.
-Length of solution path found: 17 edges
-Number of states expanded: 23
-Maximum length of the open list: 8
+Length of solution path found: 7 edges
+Number of states expanded: 7
+Maximum length of the open list: 3

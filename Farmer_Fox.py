@@ -2,8 +2,8 @@
 [STUDENTS: REPLACE THE FOLLOWING INFORMATION WITH YOUR
 OWN:]
 by Jah Chen and Eugene Cheung
-UWNetIDs: jah0311, ...
-Student numbers: 2235225, ...
+UWNetIDs: jah0311, eugene1
+Student numbers: 2235225, 1251085
 
 Assignment 2, in CSE 415, Winter 2025
  

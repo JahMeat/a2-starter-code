@@ -1,11 +1,11 @@
 """ AStar.py
 
 A* Search of a problem space.
-Partnership? (YES or NO):
-Student Name 1:
-Student Name 2:
+Partnership? (YES or NO): YES
+Student Name 1: Jah Chen
+Student Name 2: Eugene Cheung
 
-UW NetIDs:
+UW NetIDs: jah0311, eugene1
 CSE 415, Winter 2025, University of Washington
 
 This code contains my implementation of the A* Search algorithm.

@@ -140,6 +140,7 @@ OPERATORS = [Operator(
              for i in range(6)] # Paris has the most neighbors (6)
 #</OPERATORS>
 
+GOAL_TEST = lambda s: s.is_goal()
 #<GOAL_MESSAGE_FUNCTION> (optional)
 GOAL_MESSAGE_FUNCTION = lambda s: goal_message(s)
 #</GOAL_MESSAGE_FUNCTION>

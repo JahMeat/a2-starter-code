@@ -86,7 +86,7 @@ class AStar:
             (S, P) = self.OPEN.delete_min()
             self.CLOSED.append(S)
 
-            if S.is_goal():
+            if self.Problem.GOAL_TEST(S):
                 print(self.Problem.GOAL_MESSAGE_FUNCTION(S))
                 self.PATH = [str(state) for state in self.backtrace(S)]
                 self.PATH_LENGTH = len(self.PATH) - 1
@@ -94,41 +94,40 @@ class AStar:
                 self.TOTAL_COST = self.g[S]
                 print(f'Total cost of solution path found: {self.TOTAL_COST}')
                 return
+            
             self.COUNT += 1
 
-            # STEP 4. Generate each successors of S and delete
-            #         and if it is already on CLOSED, delete the new instance.
+                # STEP 4. Generate each successors of S and delete
+                #         and if it is already on CLOSED, delete the new instance.
             gs = self.g[S]  # Save the cost of getting to S in a variable.
             for op in self.Problem.OPERATORS:
                 if op.is_applicable(S):
                     new_state = op.apply(S)
-                    if new_state in self.CLOSED:
-                        del new_state
-                        continue
                     edge_cost = S.edge_distance(new_state)
                     new_g = gs + edge_cost
                     new_f = new_g + self.h(new_state)
 
-                    # If new_state already exists on OPEN:
-                    #   If its new priority is less than its old priority,
-                    #     update its priority on OPEN, and set its BACKLINK to S.
-                    #   Else: forget out this new state object... delete it.
-
-                    if new_state in self.OPEN:
+                    if new_state in self.CLOSED:
+                        existing_g = self.g[new_state]
+                        if new_g < existing_g:
+                            self.CLOSED.remove(new_state)
+                            self.OPEN.insert(new_state, new_f)
+                            self.BACKLINKS[new_state] = S
+                            self.g[new_state] = new_g
+                    elif new_state in self.OPEN:
                         P = self.OPEN[new_state]
                         if new_f < P:
                             del self.OPEN[new_state]
                             self.OPEN.insert(new_state, new_f)
-                        else:
-                            del new_state
-                            continue
+                            self.BACKLINKS[new_state] = S
+                            self.g[new_state] = new_g
                     else:
                         self.OPEN.insert(new_state, new_f)
-                    self.BACKLINKS[new_state] = S
-                    self.g[new_state] = new_g
+                        self.BACKLINKS[new_state] = S
+                        self.g[new_state] = new_g
 
         return None  # No more states on OPEN, and no goal reached.
-
+    
     def backtrace(self, S):
         path = []
         while S:
